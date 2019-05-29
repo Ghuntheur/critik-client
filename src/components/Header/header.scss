@@ -1,0 +1,27 @@
+header {
+  &.header {
+    padding: 120px 0;
+    background-image: linear-gradient(to left top, #de5460, #eda548);
+    text-align: center;
+    &.image {
+      z-index: -1;
+      .title {
+        display: inline-block;
+        padding: 20px 30px;
+        background: rgba($dark, 0.75);
+      }
+    }
+    &.movies {
+      background-image: linear-gradient(to left top, #4f4fe9, #f06565);
+    }
+    &.series {
+      background-image: linear-gradient(to left top, #c165dd, #7cfceb);
+    }
+    .title {
+      color: $light;
+      font-family: 'arial';
+      font-weight: bold;
+      font-size: 42px;
+    }
+  }
+}

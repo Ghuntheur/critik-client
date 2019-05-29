@@ -1,0 +1,30 @@
+.author-summary {
+  display: flex;
+  width: 100%;
+  .image-container {
+    @include size(80px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+  .infos {
+    font-size: 0.9em;
+    .name {
+      margin-bottom: 8px;
+      a {
+        text-decoration: none;
+        color: $dark;
+        font-weight: bold;
+        transition: 0.2s ease;
+        &:hover {
+          color: $primary;
+          transition: 0.2s ease;
+        }
+      }
+    }
+    .bio {
+      width: 30vw;
+      max-height: 50px;
+    }
+  }
+}
