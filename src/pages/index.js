@@ -5,6 +5,7 @@ import Layout from '../components/Layout/layout';
 import Header from '../components/Header/header';
 import MainContent from '../components/MainContent/main-content';
 import ReviewSummary from '../components/ReviewSummary/review-summary';
+import SEO from '../components/Seo/seo';
 
 const IndexPage = () => {
   const reviews = useStaticQuery(graphql`
@@ -42,6 +43,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO />
       <Header>Critik</Header>
       <MainContent>
         <ul className="review-container">
