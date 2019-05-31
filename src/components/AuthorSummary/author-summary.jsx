@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
@@ -17,5 +18,21 @@ const AuthorSummary = ({ name, bio, slug, image }) => (
     </div>
   </div>
 );
+
+AuthorSummary.propTypes = {
+  name: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  slug: PropTypes.shape({
+    current: PropTypes.string.isRequired
+  }).isRequired,
+  image: PropTypes.shape({
+    asset: PropTypes.shape({
+      fluid: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        srcSet: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
+};
 
 export default AuthorSummary;

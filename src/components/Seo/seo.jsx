@@ -33,4 +33,12 @@ const SEO = () => {
   );
 };
 
+SEO.propTypes = {
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      title: PropTypes.string.isRequired
+    }).isRequired
+  })
+};
+
 export default SEO;

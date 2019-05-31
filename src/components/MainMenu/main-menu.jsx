@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import styles from './main-menu.scss';
+import './main-menu.scss';
 
 const MainMenu = () => {
   const links = [
@@ -10,7 +10,7 @@ const MainMenu = () => {
   ];
 
   return (
-    <header className="main-menu" style={styles}>
+    <header className="main-menu">
       <nav className="navigation">
         <div className="home">
           <Link to="/">Critik.</Link>

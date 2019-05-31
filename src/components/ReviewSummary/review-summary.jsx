@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
@@ -20,5 +21,20 @@ const ReviewSummary = ({ type, slug, title, image }) => (
     </div>
   </div>
 );
+
+ReviewSummary.propTypes = {
+  type: PropTypes.string.isRequired,
+  slug: PropTypes.shape({
+    current: PropTypes.string.isRequired
+  }).isRequired,
+  image: PropTypes.shape({
+    asset: PropTypes.shape({
+      fluid: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        srcSet: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
+};
 
 export default ReviewSummary;
